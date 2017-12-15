@@ -12,7 +12,9 @@ while (i<numero) {
 
 
 function day (dia){ // algoritmo para saber que día de la semana es 
-    x = (a+b+c+d+e)%7;
+    x = (a+b+c+d+e);
+    x= x-7;
+    while (x<7){
     if (x==1){
         return "Lunes"
     }
@@ -34,6 +36,12 @@ function day (dia){ // algoritmo para saber que día de la semana es
     if (x==0){
         return "Domingo"
     }
+    else {
+        return "algo pasa "
+    }
+    x++;
+ }
+
 }
 
 
