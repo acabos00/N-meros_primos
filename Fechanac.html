@@ -8,18 +8,16 @@
       </script>
 </head>	
 <body>
-  <script>
+  <center><script>
       var anyo = prompt("Escoge un año"); // para que salga la ventana emergente//
       var dia = prompt("Escoge un  día");
       var mes = prompt("Escoge un mes");
-        a = year (anyo);
-        b = an (anyo);
-        c = bis (anyo);
-        d = month (mes);
-        e = parseInt(dia);
-        p = day(dia);
-        document.write (" El día que naciste era " + p);
-    </script>
+      p = day(dia,mes,anyo);
+      e = parseInt(dia);
+      z =  horoscopo (mes,e);
+       document.write (" El día que naciste era "  + p );
+       document.write ( " y tu horóscopo es " + z) ;
+    </script></center>
     <div class= "cp"><center> &copy; A.cabornero, 2017</center></div>
 </body>
 </html>

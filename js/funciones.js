@@ -11,9 +11,15 @@ while (i<numero) {
 }
 
 
-function day (dia){ // algoritmo para saber que día de la semana es 
+function day (dia,mes,anyo){ // algoritmo para saber que día de la semana es 
+    a = year (anyo);
+    b = an (anyo);
+    c = bis (anyo,mes);
+    d = month (mes);
+    e = parseInt(dia);
     x = (a+b+c+d+e);
-    x= x-7;
+    x= x%7;
+
     while (x<7){
     if (x==1){
         return "Lunes"
@@ -37,13 +43,48 @@ function day (dia){ // algoritmo para saber que día de la semana es
         return "Domingo"
     }
     else {
-        return "algo pasa "
+        x=x-7;
+        
+       
+        }
     }
-    x++;
  }
 
-}
 
+function horoscopo(mes,e){
+    if ((mes== 3 && e<22) || (mes == 4 && e<=20)){
+        return "aries";
+    }
+    if ((mes== 4 && e<=22) ||(mes == 5 && e<=20)){
+        return "tauro";
+    }
+    if ((mes== 5 && e<22) || (mes == 6 && e<=20)){
+        return "géminis";
+    }
+    if ((mes== 6 && e<=22) || (mes == 7 && e<=20)){
+        return "cáncer";
+    }
+    if ((mes== 7 && e<22) ||(mes == 8 && e<=20)){
+        return "leo";
+    }
+    if ((mes== 8 && e<=22) || (mes == 9 && e<=20)){
+        return "virgo";
+    }
+    if ((mes== 9 && e<22) || (mes == 10 && e<=20)){
+        return "libra";
+    }
+    if ((mes== 10 && e<=22) || (mes == 11 && e<=20)){
+        return "escorpio";
+    }
+    if ((mes== 11 && e<22) || (mes == 12 && e<=20)){
+        return "sagitario";
+    }
+    if ((mes== 12 && e<=22) || (mes == 01 && e<=19)){
+        return "capricornio";
+    }
+
+
+}
 
 function year (anyo){
 
@@ -74,7 +115,7 @@ function an (anyo){
 }
 
 
-function bis(anyo) {
+function bis(anyo,mes) {
      if( (anyo%100!=0 || anyo%400==0) && anyo%4== 0){
         if (mes== 1|| mes ==2){
             return -1;
