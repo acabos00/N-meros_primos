@@ -1,13 +1,13 @@
 function primos (numero){
     var i=2;
-while (i<numero) {
-    console.log(i);
-    if (numero%i==0){
-        return false; //  no es primo
+    while (i<numero) {
+        console.log(i);
+        if (numero%i==0){
+            return false; //  no es primo
+        }
+        i++;
     }
-    i++;
- }
- return true; //  es primo
+    return true; //  es primo
 }
 
 
@@ -19,75 +19,75 @@ function day (dia,mes,anyo){ // algoritmo para saber que día de la semana es
     e = parseInt(dia);
     x = (a+b+c+d+e);
     x= x%7;
-
-    while (x<7){
-    if (x==1){
-        return "Lunes"
-    }
-    if (x==2){
-        return "Martes"
-    }
-    if (x==3){
-        return "Miércoles"
-    }
-    if (x==4){
-        return "Jueves"
-    }
-    if (x==5){
-        return "Viernes"
-    }
-    if (x==6){
-        return "Sábado"
-    }
-    if (x==0){
-        return "Domingo"
-    }
-    else {
-        x=x-7;
-        
-       
+    
+    while (x<7){ // función para los días de la semana
+        if (x==1){
+            return "Lunes"
+        }
+        if (x==2){
+            return "Martes"
+        }
+        if (x==3){
+            return "Miércoles"
+        }
+        if (x==4){
+            return "Jueves"
+        }
+        if (x==5){
+            return "Viernes"
+        }
+        if (x==6){
+            return "Sábado"
+        }
+        if (x==0){
+            return "Domingo"
+        }
+        else {
+            x=x-7;
+            
+            
         }
     }
- }
+}
 
 
-function horoscopo(mes,e){
+function horoscopo(mes,e){ // función para saber horóscopo
     if ((mes== 3 && e<22) || (mes == 4 && e<=20)){
         return "aries";
     }
-    if ((mes== 4 && e<=22) ||(mes == 5 && e<=20)){
+    if ((mes== 4 && e>=22) ||(mes == 5 && e<=20)){
         return "tauro";
     }
     if ((mes== 5 && e<22) || (mes == 6 && e<=20)){
         return "géminis";
     }
-    if ((mes== 6 && e<=22) || (mes == 7 && e<=20)){
+    if ((mes== 6 && e>=22) || (mes == 7 && e<=20)){
         return "cáncer";
     }
     if ((mes== 7 && e<22) ||(mes == 8 && e<=20)){
         return "leo";
     }
-    if ((mes== 8 && e<=22) || (mes == 9 && e<=20)){
+    if ((mes== 8 && e>=22) || (mes == 9 && e<=20)){
         return "virgo";
     }
     if ((mes== 9 && e<22) || (mes == 10 && e<=20)){
         return "libra";
     }
-    if ((mes== 10 && e<=22) || (mes == 11 && e<=20)){
+    if ((mes== 10 && e>=22) || (mes == 11 && e<=20)){
         return "escorpio";
     }
     if ((mes== 11 && e<22) || (mes == 12 && e<=20)){
         return "sagitario";
     }
-    if ((mes== 12 && e<=22) || (mes == 01 && e<=19)){
+    if ((mes== 12 && e>=22) || (mes == 01 && e<=19)){
         return "capricornio";
     }
-
-
+    
+    
 }
 
-function year (anyo){
-
+function year (anyo){ // función siglo
+    
     if (anyo>=1700 && anyo<=1799){
         return 5;
     }
@@ -115,18 +115,21 @@ function an (anyo){
 }
 
 
-function bis(anyo,mes) {
-     if( (anyo%100!=0 || anyo%400==0) && anyo%4== 0){
-        if (mes== 1|| mes ==2){
-            return -1;
-     }
-     }else{
-         return 0;
-     }
-    }
+function bis(anyo,mes) { // bisiesto?
     
+    if( (anyo%100!=0 || anyo%400==0) && anyo%4== 0){
+        if (mes== 1|| mes ==2){
+            return -1; // era bisiesto y además enero o febrero
+        }
+        else{
+            return 0;
+        }
+    } else {
+        return 0;
+    }
+}    
 
-function month (mes) {
+function month (mes) { // mes
     if (mes == 1 || mes == 10 ){
         return 6 ;
     }
