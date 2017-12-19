@@ -55,32 +55,38 @@ function horoscopo(mes,e){ // función para saber horóscopo
     if ((mes== 3 && e<22) || (mes == 4 && e<=20)){
         return "aries";
     }
-    if ((mes== 4 && e>=22) ||(mes == 5 && e<=20)){
+    if ((mes== 4 && e>=21) ||(mes == 5 && e<=21)){
         return "tauro";
     }
-    if ((mes== 5 && e<22) || (mes == 6 && e<=20)){
+    if ((mes== 5 && e<22) || (mes == 6 && e<=22)){
         return "géminis";
     }
-    if ((mes== 6 && e>=22) || (mes == 7 && e<=20)){
+    if ((mes== 6 && e>=23) || (mes == 7 && e<=23)){
         return "cáncer";
     }
-    if ((mes== 7 && e<22) ||(mes == 8 && e<=20)){
+    if ((mes== 7 && e<25) ||(mes == 8 && e<=23)){
         return "leo";
     }
-    if ((mes== 8 && e>=22) || (mes == 9 && e<=20)){
+    if ((mes== 8 && e>=25) || (mes == 9 && e<=23)){
         return "virgo";
     }
-    if ((mes== 9 && e<22) || (mes == 10 && e<=20)){
+    if ((mes== 9 && e<25) || (mes == 10 && e<=23)){
         return "libra";
     }
-    if ((mes== 10 && e>=22) || (mes == 11 && e<=20)){
+    if ((mes== 10 && e>=24) || (mes == 11 && e<=22)){
         return "escorpio";
     }
-    if ((mes== 11 && e<22) || (mes == 12 && e<=20)){
+    if ((mes== 11 && e<24) || (mes == 12 && e<=21)){
         return "sagitario";
     }
-    if ((mes== 12 && e>=22) || (mes == 01 && e<=19)){
+    if ((mes== 12 && e>=22) || (mes == 1 && e<=20)){
         return "capricornio";
+    }
+    if ((mes== 1 && e>=21) || (mes == 2 && e<=19)){
+        return "acuario";
+    }
+    if ((mes== 2 && e>=20) || (mes == 3 && e<=20)){
+        return "piscis";
     }
     
     
